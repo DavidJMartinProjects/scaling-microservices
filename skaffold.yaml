@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta12
+kind: Config
+metadata:
+  name: scaling-app-ecosystem
+build:
+  local:
+    concurrency: 0 #builds all artifacts in parallel
+requires:
+  - path: ./client-service
+deploy:
+  kubectl:
+    manifests:
+    - service-mesh/order-app.api-gateway.yaml
+    - service-mesh/api-gateway-routes.virtualservice.yaml
