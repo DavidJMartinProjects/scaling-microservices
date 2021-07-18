@@ -12,3 +12,7 @@ deploy:
     manifests:
     - service-mesh/order-app.api-gateway.yaml
     - service-mesh/api-gateway-routes.virtualservice.yaml
+    - observability/prometheus.yaml
+    - observability/grafana.yaml
+    - observability/kiali.yaml
+    - observability/jaeger.yaml

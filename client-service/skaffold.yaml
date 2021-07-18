@@ -10,6 +10,6 @@ build:
 deploy:
   kubectl:
     manifests:
-    - k8/deployment.yaml
-    - k8/pod.scaler.yaml
+    - k8/deployment.yaml    
     - k8/metrics.server.deployment.yaml
+    - k8/horizontal.pod.scaler.yaml
